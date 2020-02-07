@@ -37,7 +37,8 @@ Role Variables
 Dependencies
 ------------
 
-none
+- src: redbeard28.pip3
+- src: redbeard28.python3_apt
 
 Example Playbook
 ----------------
