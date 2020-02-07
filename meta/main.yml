@@ -1,0 +1,21 @@
+---
+galaxy_info:
+  author: Jeremie CUADRADO
+  role_name: pyazuremodules
+  description: Ansible role install msret msretazure azure python3 modules.
+  license: GPLv3
+  company: Redbeard-Consulting
+  min_ansible_version: 2.9
+
+  platforms:
+    - name: Debian
+      versions:
+        - all
+
+  galaxy_tags:
+    - python
+    - azure
+    - cloud
+
+  dependencies:
+    - src: redbeaerd28.pip3

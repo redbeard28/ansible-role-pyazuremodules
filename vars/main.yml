@@ -1,0 +1,9 @@
+---
+packages:
+  - msrest
+  - msrestazure
+  - azure-mgmt-authorization
+  - azure
+  - azure-common
+  - pyOpenSSL
+  - cryptography
