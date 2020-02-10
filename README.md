@@ -15,7 +15,6 @@ ansible-galaxy install -r requirements.yml
 
 Inside requirements.yml
 ````yaml
-# from GitHub, overriding the name and specifying a specific tag
 - src: redbeard28.pyazuremodules
 ````
 
@@ -31,7 +30,7 @@ Role Variables
 
 ```yaml
 ---
-# Put role variables
+requirements_path: "/tmp"
 ```
 
 Dependencies
@@ -47,7 +46,7 @@ Including an example of how to use your role (for instance, with variables passe
 
     - hosts: all
       roles:
-         - { role: redbeard28.pyazuremodules, tags: mytags }
+         - { role: redbeard28.pyazuremodules, tags: azure_requirements }
 
 
 Molecule testing framework

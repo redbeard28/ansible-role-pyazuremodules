@@ -1,4 +1,11 @@
 ---
+- name: "{{ ansible_distribution | lower }} | {{ ansible_distribution_release }} - Copy requirements-azure.txt"
+  copy:
+    src: "requirements-azure.txt"
+    dest: "{{ requirements_path }}"
+    owner: root
+    group: root
+
 - name: "{{ ansible_distribution | lower }} | {{ ansible_distribution_release }} - Install with pip3"
   pip:
-    requirements: "{{ role_path }}/files/requirements-azure.txt"
+    requirements: "{{ requirements_path }}/requirements-azure.txt"

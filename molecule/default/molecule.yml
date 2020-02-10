@@ -20,6 +20,7 @@ provisioner:
   name: ansible
   playbooks:
     converge: ../resources/default.yml
+    prepare: ../resources/prepare.yml
   lint:
     name: ansible-lint
 scenario:
@@ -28,15 +29,18 @@ scenario:
     - destroy
     - dependency
     - create
+    - prepare
   converge_sequence:
     - destroy
     - dependency
     - create
+    - prepare
     - converge
   destroy_sequence:
     - destroy
   test_sequence:
     - create
+    - prepare
     - converge
     - verify
     - destroy
