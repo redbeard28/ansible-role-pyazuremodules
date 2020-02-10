@@ -4,6 +4,7 @@ packages:
   - msrestazure
   - azure-mgmt-authorization
   - azure
+  - azure.storage
   - azure-common
   - pyOpenSSL
   - cryptography
