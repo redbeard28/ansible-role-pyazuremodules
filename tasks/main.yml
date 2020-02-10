@@ -1,5 +1,4 @@
 ---
 - name: "{{ ansible_distribution | lower }} | {{ ansible_distribution_release }} - Install with pip3"
   pip:
-    name: "{{ item }}"
-  with_items: "{{ packages }}"
+    requirements: requirements-azure.txt
