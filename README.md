@@ -3,6 +3,8 @@ ANSIBLE-ROLE-PYAZUREMODULES
 
 Ansible role install msret msretazure azure python3 modules.
 
+## Version
+0.0.2 - This new version add latest requireemnts-azure.txt from the original repository.
 
 ## Howto use this role?
 This role need to be include in a playbook. 

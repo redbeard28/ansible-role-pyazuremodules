@@ -1,10 +1,16 @@
 ---
+- name: "{{ ansible_distribution | lower }} | {{ ansible_distribution_release }} - Download latest requirements from Microsoft"
+  get_url:
+    url: https://raw.githubusercontent.com/ansible-collections/azure/dev/requirements-azure.txt
+    dest: "{{ requirements_path }}/requirements-azure.txt"
+    mode: '0440'
+
 - name: "{{ ansible_distribution | lower }} | {{ ansible_distribution_release }} - Copy requirements-azure.txt"
   copy:
-    src: "requirements-azure.txt"
+    src: "{{ requirements_path }}/requirements-azure.txt"
     dest: "{{ requirements_path }}"
-    owner: root
-    group: root
+#    owner: root
+#    group: root
 
 - name: "{{ ansible_distribution | lower }} | {{ ansible_distribution_release }} - Install with pip3"
   pip:
